@@ -1,10 +1,15 @@
 preprocessing:
-	@R CMD BATCH scripts/preprocessing.R
+	@R --no-save CMD BATCH preprocessing.R
 	@make clean
 
 ml:
 	@R --no-save CMD BATCH ml.R
 	@make clean
+
+pca:
+	@R --no-save CMD BATCH dr.R
+	@make clean
+
 
 help:
 	@echo "Please use \`make <target>' where <target> is one of"

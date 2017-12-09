@@ -37,4 +37,4 @@ main = function(){
 }
 
 
-ml('../input/dataset/in.csv', '../output/ml/out.csv')
+ml('../input/ml/in.csv', '../output/ml/out.csv')
