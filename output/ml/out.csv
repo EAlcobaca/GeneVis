@@ -1,0 +1,4 @@
+"learner.id";"acc.test.mean";"bac.test.mean";"f1.test.mean";"gmean.test.mean";"kappa.test.mean";"tpr.test.mean";"tnr.test.mean"
+"classif.svm";0,92;0,924;0,9198;0,9207;0,8383;0,9467;0,9014
+"classif.randomForest";0,94;0,942;0,931;0,9388;0,8765;0,955;0,929
+"classif.knn";0,85;0,8673;0,8375;0,8575;0,704;0,7855;0,949
