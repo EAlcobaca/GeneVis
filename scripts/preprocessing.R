@@ -23,7 +23,7 @@ dataclean = function(){
         df = df[c(sample(normal,50), sample(cancer,50)),]
         df$Class = ifelse(df$Class == 'NT','normal', 'cancer' )
 
-        write.csv2(x=df, file=f, row.names=FALSE)
+        write.csv(x=df, file=f, row.names=FALSE)
 
     }
 
@@ -39,7 +39,7 @@ filttelSelection = function(){
     for (f in files.path){
         i = 1+i
 
-        df = read.csv2(f)
+        df = read.csv(f)
 
         #df = iris
         colnames(df)[ncol(df)] = 'Class'
@@ -60,8 +60,9 @@ filttelSelection = function(){
         for (fil in filters){
             aux = mt[,c('name',fil)]
             aux = aux[order(aux[,2],decreasing=TRUE),]
+            colnames(aux) = c('names','filter')
 
-            write.csv2(x=aux, file =paste('../output/filtters', fil, files[i], sep='/'), row.names=FALSE)
+            write.csv(x=aux, file =paste('../output/filtters', fil, files[i], sep='/'), row.names=FALSE)
         }
 
     }

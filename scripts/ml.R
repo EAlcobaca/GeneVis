@@ -3,7 +3,7 @@ library(mlr)
 
 ml = function(data.path, output.path){
 
-    data = read.csv2(data.path)
+    data = read.csv(data.path)
     task = makeClassifTask(data=data, target = "Class") 
 
     ## Two learners to be compared
@@ -26,7 +26,7 @@ ml = function(data.path, output.path){
         perf[,i] = round(perf[,i],4)
     } 
 
-    write.csv2(x=perf, output.path, row.names=FALSE)
+    write.csv(x=perf, output.path, row.names=FALSE)
     save(perf, file=paste(output.path,'.models.RData',sep=''))
 
 }
@@ -37,4 +37,4 @@ main = function(){
 }
 
 
-ml('../input/ml/in.csv', '../output/ml/out.csv')
+ml('../input/ml/data.csv', '../output/ml/out.csv')

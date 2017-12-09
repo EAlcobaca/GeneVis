@@ -7,20 +7,19 @@ norm01 = function(x){
 
 pca.dr = function(data.in, data.out, sdper.out){
 
-    data = read.csv2(data.in)
+    data = read.csv(data.in)
     Class = as.character(data$Class)
     data = data[,-ncol(data)]
     pca <- prcomp(data)
 
-    newdata = as.data.frame(pca$x)
+    newdata = data.frame(pca$x)
     percDisp = data.frame(norm01(pca$sdev))
     percDisp$comp = colnames(newdata)
     colnames(percDisp) = c('comp','PCA')
 
     newdata$Class = Class
-
-    write.csv2(x=format(newdata, digits=8), file=data.out, row.names=FALSE)
-    write.csv2(x=format(percDisp, digits=8), file=sdper.out, row.names=FALSE)
+    write.csv(x=format(newdata, digits=8), file=data.out, row.names=FALSE)
+    write.csv(x=format(percDisp, digits=8), file=sdper.out, row.names=FALSE)
 
 }
 
