@@ -13,7 +13,7 @@ dataclean = function(){
     for (f in files.path){
 
         df = read.csv2(f)
-        colsn = paste('rna-',1:ncol(df),sep='')
+        colsn = paste('rna.',1:ncol(df),sep='')
         colsn[length(colsn)] = 'Class'
         colnames(df) = colsn
 
