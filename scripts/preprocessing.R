@@ -1,5 +1,7 @@
 library(mlr)
 
+set.seed(123)
+
 norm01 = function(x){
     return (normalized = (x-min(x))/(max(x)-min(x)))
 }
