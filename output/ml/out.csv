@@ -1,4 +1,4 @@
 "learner.id","acc.test.mean","bac.test.mean","f1.test.mean","gmean.test.mean","kappa.test.mean","tpr.test.mean","tnr.test.mean"
-"classif.svm",0.92,0.9175,0.919,0.9116,0.835,0.9217,0.9133
-"classif.randomForest",0.93,0.9204,0.9253,0.9123,0.8396,0.9417,0.899
-"classif.knn",0.84,0.8383,0.8253,0.8222,0.6692,0.7933,0.8833
+"classif.svm",0.92,0.9204,0.9217,0.9179,0.8365,0.9207,0.92
+"classif.randomForest",0.94,0.9461,0.933,0.9437,0.8765,0.9407,0.9514
+"classif.knn",0.83,0.838,0.8189,0.8305,0.6551,0.7702,0.9057

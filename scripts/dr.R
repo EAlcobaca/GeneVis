@@ -7,9 +7,12 @@ norm01 = function(x){
 
 pca.dr = function(data.in, data.out, sdper.out){
 
-    data = read.csv(data.in)
+    colsImp = read.table(data.in, sep=',', head=FALSE)
+
+    data = read.csv('../datasets/PRAD.mirnaseq.csv')
     Class = as.character(data$Class)
     data = data[,-ncol(data)]
+    data = data[, as.vector(unlist(colsImp))]
     pca <- prcomp(data)
 
     newdata = data.frame(pca$x)
@@ -23,7 +26,7 @@ pca.dr = function(data.in, data.out, sdper.out){
 
 }
 
-pca.dr('../input/dr/pca/data.csv','../output/dr/pca/data.csv', '../output/dr/pca/sdper.csv')
-pca.dr('../datasets/BRCA.mirnaseq.csv','../output/dr/pca-all/BRCA.mirnaseq.csv', '../output/dr/pca-all/sdper.BRCA.mirnaseq.csv')
-pca.dr('../datasets/PRAD.mirnaseq.csv','../output/dr/pca-all/PRAD.mirnaseq.csv', '../output/dr/pca-all/sdper.PRAD.mirnaseq.csv')
+pca.dr('../input/dr/pca/in.csv','../output/dr/pca/data.csv', '../output/dr/pca/sdper.csv')
+#pca.dr('../datasets/BRCA.mirnaseq.csv','../output/dr/pca-all/BRCA.mirnaseq.csv', '../output/dr/pca-all/sdper.BRCA.mirnaseq.csv')
+#pca.dr('../datasets/PRAD.mirnaseq.csv','../output/dr/pca-all/PRAD.mirnaseq.csv', '../output/dr/pca-all/sdper.PRAD.mirnaseq.csv')
 
