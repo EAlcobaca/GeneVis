@@ -1,0 +1,4 @@
+"learner.id","acc.test.mean","bac.test.mean","f1.test.mean","gmean.test.mean","kappa.test.mean","tpr.test.mean","tnr.test.mean"
+"classif.svm",0.95,0.9471,0.942,0.9435,0.8874,0.9142,0.98
+"classif.randomForest",0.95,0.9508,0.9455,0.9471,0.8882,0.9217,0.98
+"classif.knn",0.97,0.9671,0.9622,0.9646,0.9274,0.9342,1
